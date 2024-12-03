@@ -10,7 +10,7 @@
 * 变量和常数用名词命名（常数大写）
 
 ## 函数与方法
-* 函数命名用动词＿名词（小写）组合例如 **def get_elements()**
+* 函数命名用**动词＿名词**（小写）组合例如 **def get_elements()**
 * 函数的标签和变量名要清晰易懂。
 * 仅在模块内部使用（internal）函数用　`_`开头
 * 私有函数（private function）用两个`__`开头
@@ -33,12 +33,12 @@ def my_function(arg1, arg2):
 ## 类与对象
 * 类名用名词（首字母大写），采用驼峰命名法例如：`class FiniteElementCollector`
 * 实例变量用名词（小写）
-* 数据类的class可以用＠dataclass去简化类的创建和定义
+* 数据类的class可以用`@dataclass`装饰器，去简化类的创建和定义
 * 学会重载（定义）magic methods:`__init__`, `__new__`, `__del__`, `__str__`, `__repr＿`, `__eq__`, `__hash__`, `__len__`, `__getitem__`, `__setitem__`, `__delitem__`, `__iter__`, `__contains__`, `__add__`, `__sub__`, `__mul__`, , `__mod__`, `__pow__`, `__and__`,`__imul__`, `__itruediv__`, `__neg__`, `__pos__`, `__abs__`, `__invert__`, etc.  
 其中`__str__`和`__repr__`是python中两个比较特殊的magic methods，`__str__`返回用户看到的字符串，`__repr__`返回程序员看到的字符串，一般来说，`__str__`返回的字符串应该是用户可以读懂的，`__repr__`返回的字符串应该是程序员可以读懂的。`print()`命令会调用`__str__`方法，`str()`函数会调用`__repr__`方法。
 * 使用built-in函数`dir()`去查看对象(object)的所有属性和方法（魔法方法）
-* 类方法（classmethod）用@classmethod装饰器，类方法只能访问类变量和类方法，不能访问实例变量和实例方法。
-* 静态方法（staticmethod）用@staticmethod装饰器，静态方法可以访问类变量和类方法，不能访问实例变量和实例方法。
+* 类方法（classmethod）用`@classmethod`装饰器，类方法只能访问类变量和类方法，不能访问实例变量和实例方法。
+* 静态方法（staticmethod）用`@staticmethod`装饰器，静态方法可以访问类变量和类方法，不能访问实例变量和实例方法。
 
 
 ## Tips
