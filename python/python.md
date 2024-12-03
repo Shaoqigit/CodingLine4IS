@@ -5,7 +5,7 @@
     - 注意最大行长度
     - 函数以及类之间两个空行
     - 类内部的方法间一个空行
-* 一个模块modules只做一类事情，相关的类放到一个模块中。模块文件的命名用复数，除了main.py, core.py or config.py
+* 一个模块modules只做一类事情，相关的类放到一个模块中。模块文件的命名用复数，除了main.py, core.py or config.py。例如`elements.py`, `materials.py`等。
 * import要按照如下顺序：标准库，相关第三方，本地lib
 * 变量和常数用名词命名（常数大写）
 
