@@ -51,6 +51,7 @@ delattr()
 ## Tips
 * 一定要做开发环境的隔离和包管理（conda, pipenv）
 * 方便使用类型标注（typing hint）的地方请使用类型标注
+* 使用breakpoint()函数来调试代码
 * **修改API形参位置的时候要注意修改所有使用该API的地方**
 * UI和非UI相关的函数/代码一定要分开
 * 在使用`try－except`的时候
