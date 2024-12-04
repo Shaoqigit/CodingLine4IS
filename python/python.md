@@ -37,6 +37,13 @@ def my_function(arg1, arg2):
 * 学会重载（定义）magic methods:`__init__`, `__new__`, `__del__`, `__str__`, `__repr＿`, `__eq__`, `__hash__`, `__len__`, `__getitem__`, `__setitem__`, `__delitem__`, `__iter__`, `__contains__`, `__add__`, `__sub__`, `__mul__`, , `__mod__`, `__pow__`, `__and__`,`__imul__`, `__itruediv__`, `__neg__`, `__pos__`, `__abs__`, `__invert__`, etc.  
 其中`__str__`和`__repr__`是python中两个比较特殊的magic methods，`__str__`返回用户看到的字符串，`__repr__`返回程序员看到的字符串，一般来说，`__str__`返回的字符串应该是用户可以读懂的，`__repr__`返回的字符串应该是程序员可以读懂的。`print()`命令会调用`__str__`方法，`str()`函数会调用`__repr__`方法。
 * 使用built-in函数`dir()`去查看对象(object)的所有属性和方法（魔法方法）
+* operator on the property of objects by characters
+```python
+hasattr()
+getattr()
+setattr()
+delattr()
+```
 * 类方法（classmethod）用`@classmethod`装饰器，类方法只能访问类变量和类方法，不能访问实例变量和实例方法。
 * 静态方法（staticmethod）用`@staticmethod`装饰器，静态方法可以访问类变量和类方法，不能访问实例变量和实例方法。
 
