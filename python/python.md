@@ -18,12 +18,27 @@
 * 在使用`try－except`的时候
     * 避免对大块代码使用
     * 一定要写清楚具体catch的错误是什么
-* 尽量使用‘f－string’
-* 尽量避免‘if－else’
-* 使用‘defaultdict’对于需要初始化的字典
-* assert用于对内debugging（不该出现的情况），raise对内（还没有考虑到的情况）
+* 尽量使用‘f－string’  
+```python
+name = 'John'
+age = 25
+print(f'My name is {name} and I am {age} years old.')
+```
+* 尽量避免`if－else`，尝试使用字典`dict`或者`match`去做条件判断
+* 使用`defaultdict`对于需要初始化的字典
+```python
+from collections import defaultdict
+d = defaultdict(set)
+d['a'].add(1)
+d['a'].add(2)
+```
+* `assert`用于对内debugging（不该出现的情况），`raise`对内（还没有考虑到的情况）
 * 多用iterable迭代器和生成器，少用循环
+* 当你需要在某个数据容器中查找元素时，使用 `set()` 而不是 `list()` （速度更快）
 * 修改代码使记得修改相对应的注释（注释并不总是必要的）
+* Python有自己的的垃圾回收机制（garbage collection），不需要手动回收内存。引用计数（reference counting）的垃圾回收机制会导致循环引用的问题。
+* 多用列表推导式，少用显示循环
+* 多用生成器表达式，少用列表生成式
 
 ## 函数与方法
 * 函数命名用**动词＿名词**（小写）组合例如 **def get_elements()**
@@ -55,10 +70,10 @@ def my_function(arg1, arg2):
 * 使用built-in函数`dir()`去查看对象(object)的所有属性和方法（魔法方法）
 * operator on the property of objects by characters
 ```python
-hasattr()
-getattr()
-setattr()
-delattr()
+isinstance(obj, type) # check if the object is an instance of the type
+getattr(obj, 'attr') # get the attribute of the object
+setattr(obj, 'attr', value) # set the attribute of the object
+hasattr(obj, 'attr') # check if the object has the attribute
 ```
 * 类方法（classmethod）用`@classmethod`装饰器，类方法只能访问类变量和类方法，不能访问实例变量和实例方法。
 * 静态方法（staticmethod）用`@staticmethod`装饰器，静态方法可以访问类变量和类方法，不能访问实例变量和实例方法。
