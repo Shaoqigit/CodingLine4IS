@@ -9,6 +9,22 @@
 * import要按照如下顺序：标准库，相关第三方，本地lib
 * 变量和常数用名词命名（常数大写）
 
+## General Tips
+* 一定要做开发环境的隔离和包管理（conda, pipenv）
+* 方便使用类型标注（typing hint）的地方请使用类型标注
+* 使用`breakpoint()`或者`import pdb;pdb.set_trace()`函数来调试代码
+* **修改API形参位置的时候要注意修改所有使用该API的地方**
+* UI和非UI相关的函数/代码一定要分开
+* 在使用`try－except`的时候
+    * 避免对大块代码使用
+    * 一定要写清楚具体catch的错误是什么
+* 尽量使用‘f－string’
+* 尽量避免‘if－else’
+* 使用‘defaultdict’对于需要初始化的字典
+* assert用于对内debugging（不该出现的情况），raise对内（还没有考虑到的情况）
+* 多用iterable迭代器和生成器，少用循环
+* 修改代码使记得修改相对应的注释（注释并不总是必要的）
+
 ## 函数与方法
 * 函数命名用**动词＿名词**（小写）组合例如 **def get_elements()**
 * 函数的标签和变量名要清晰易懂。
@@ -48,21 +64,7 @@ delattr()
 * 静态方法（staticmethod）用`@staticmethod`装饰器，静态方法可以访问类变量和类方法，不能访问实例变量和实例方法。
 
 
-## Tips
-* 一定要做开发环境的隔离和包管理（conda, pipenv）
-* 方便使用类型标注（typing hint）的地方请使用类型标注
-* 使用breakpoint()函数来调试代码
-* **修改API形参位置的时候要注意修改所有使用该API的地方**
-* UI和非UI相关的函数/代码一定要分开
-* 在使用`try－except`的时候
-    * 避免对大块代码使用
-    * 一定要写清楚具体catch的错误是什么
-* 尽量使用‘f－string’
-* 尽量避免‘if－else’
-* 使用‘defaultdict’对于需要初始化的字典
-* assert用于对内debugging（不该出现的情况），raise对内（还没有考虑到的情况）
-* 多用iterable迭代器和生成器，少用循环
-* 修改代码使记得修改相对应的注释（注释并不总是必要的）
+
 
 
 
