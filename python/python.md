@@ -12,6 +12,7 @@
 ## General Tips
 * 一定要做开发环境的隔离和包管理（conda, pipenv）
     * `conda create -n myenv python=3.11` 创建环境
+    * `conda env list` 查看环境列表
     * `conda activate myenv` 激活环境
     * `pip/conda install -r requirements.txt` 安装依赖
 * 方便使用类型标注（typing hint）的地方请使用类型标注
