@@ -9,6 +9,38 @@
 * import要按照如下顺序：标准库，相关第三方，本地lib
 * 变量和常数用名词命名（常数大写）
 
+## Python 语法新特性
+* 海象运算符（valrus operator）`:=`:变量赋值+条件表达
+```python
+# case 1
+l = [1, 2, 3]
+if (lenght:=len(l))>0:
+    print(f"The length of the list is {lenght}")
+# case 2
+l = [2,4,6,8]
+is_even = all((num:=i)%2==0 for i in l)
+print(f"All numbers in the list are even: {is_even} and the number is {num}")
+```
+* `match-case`表达式（比的`if-elif-else`更更灵活）：
+```python
+match x:
+    case 0:
+        print("x is zero")
+    case 1:
+        print("x is one")
+    case _:
+        print("x is neither zero nor one")
+```
+* 异步编程（async/await）（适用于ＩＯ密集型应用）：
+```python
+async def my_coroutine():
+    await asyncio.sleep(1)
+    print("Hello, world!")
+    loop = asyncio.get_event_loop()
+loop.run_until_complete(my_coroutine())
+```
+
+
 ## General Tips
 * 一定要做开发环境的隔离和包管理（conda, pipenv）
     * `conda create -n myenv python=3.11` 创建环境
